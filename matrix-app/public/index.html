@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix Calc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🔢 Калькулятор матриц</h1>
+  
+  <div class="container">
+    <div class="panel">
+      <h3>Матрица A</h3>
+      <div class="size-controls">
+        <label>Строки: <input type="number" id="rowsA" value="3" min="1" max="10"></label>
+        <label>Столбцы: <input type="number" id="colsA" value="3" min="1" max="10"></label>
+        <button onclick="updateGrid('A')">Применить</button>
+      </div>
+      <div id="gridA" class="grid"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Матрица B</h3>
+      <div class="size-controls">
+        <label>Строки: <input type="number" id="rowsB" value="3" min="1" max="10"></label>
+        <label>Столбцы: <input type="number" id="colsB" value="3" min="1" max="10"></label>
+        <button onclick="updateGrid('B')">Применить</button>
+      </div>
+      <div id="gridB" class="grid"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="calc('det')">det(A)</button>
+    <button onclick="calc('mul')">A × B</button>
+    <button onclick="calc('inv')">inv(A)</button>
+  </div>
+
+  <div id="output" class="panel"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
